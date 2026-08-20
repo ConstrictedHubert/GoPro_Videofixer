@@ -1,0 +1,5 @@
+#!/bin/bash
+# Convenience wrapper: runs gopro_videofixer.py with the project's own venv,
+# regardless of which directory you call it from.
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec "$DIR/.venv/bin/python3" "$DIR/gopro_videofixer.py" "$@"
